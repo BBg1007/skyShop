@@ -42,10 +42,10 @@ public class StorageService {
 
     public Collection<Searchable> toSearchable() {
 
-        Set<Searchable> searchables = new HashSet<>();
+        List<Searchable> searchables = new ArrayList<>();
 
-        searchables.add((Searchable) storageArticle.values());
-        searchables.add((Searchable) storageProduct.values());
+        searchables.addAll(this.storageArticle.values());
+        searchables.addAll(this.storageProduct.values());
 
         return searchables;
 
